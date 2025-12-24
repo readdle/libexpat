@@ -3,11 +3,11 @@ import Foundation
 import PackageDescription
 
 let configHeaderSearchPath: String
-if ProcessInfo.processInfo.environment["BUILD_ANDROID"] != nil {
+#if TARGET_ANDROID
     configHeaderSearchPath = "../../config/android"
-} else {
+#else
     configHeaderSearchPath = "../../config/apple"
-}
+#endif
 
 let package = Package(
     name: "expat",
