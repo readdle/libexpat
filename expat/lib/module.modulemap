@@ -1,0 +1,5 @@
+module expat {
+    header "expat.h"
+    header "expat_external.h"
+    export *
+}
